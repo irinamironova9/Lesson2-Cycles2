@@ -71,11 +71,27 @@ public class Main {
         // Задание 4
         System.out.println("Задание 4");
         int firstFriday = 2;
-        int date;
-        for (date = 1; date <= 31; date++) {
+        for (int date = 1; date <= 31; date++) {
             if (date == firstFriday || (date - firstFriday) % 7 == 0) {
                 System.out.println("Сегодня пятница, " + date + " число. Необходимо подготовить отчёт.");
             }
+        }
+        // ДЗ Часть 3
+        System.out.println("ДЗ Часть 3");
+        // Задание 1
+        System.out.println("Задание 1");
+        int year = 2022;
+        int years200Before = year - 200;
+        int years100After = year + 100;
+        for (int y = 0; y <= years100After; y++) {
+            if (y % 79 == 0 && y >= years200Before) {
+                System.out.println(y);
+            }
+        }
+        // Задание 2
+        System.out.println("Задание 2");
+        for (int m = 1; m <= 10; m++) {
+            System.out.println("2 * " + m + " = " + m * 2);
         }
 
     }
