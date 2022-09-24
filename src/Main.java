@@ -6,66 +6,63 @@ public class Main {
         System.out.println("Задание 1");
         int monthlySavings = 15_000;
         int total = 0;
-        int i = 0;
+        int m = 0; // m - month (здесь и далее кол-во месяцев)
         while (total < 2_459_000) {
-            total = total + total/100;
+            total = total + total / 100;
             total = total + monthlySavings;
-            i = i + 1;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей.");
+            m = m + 1;
+            System.out.println("Месяц " + m + ", сумма накоплений равна " + total + " рублей.");
         }
         // Задание 2
         System.out.println("Задание 2");
-        int a = 1;
-        while (a <= 10) {
-            System.out.print(a + " ");
-            a++;
+        int d = 1;
+        while (d <= 10) {
+            System.out.print(d + " ");
+            d++;
         }
-        System.out.println(" ");
-        for (a = 10; a >= 1; a--) {
-            System.out.print(a + " ");
+        System.out.println();
+        for (d = 10; d >= 1; d--) {
+            System.out.print(d + " ");
         }
-        System.out.println(" ");
+        System.out.println();
         // Задание 3
         System.out.println("Задание 3");
         int population = 12_000_000;
         int birthsPer1000 = 17;
         int deathsPer1000 = 8;
-        for(i = 1; i <=10; i++) {
-            population = population + (population/1000 * birthsPer1000) - (population/1000 * deathsPer1000);
-            System.out.println("Год " + i + ", численность населения составляет " + population + " человек.");
+        for(int y = 1; y <=10; y++) {
+            population = population + (population / 1000 * birthsPer1000) - (population / 1000 * deathsPer1000);
+            System.out.println("Год " + y + ", численность населения составляет " + population + " человек.");
         }
         // ДЗ Часть 2
         System.out.println("ДЗ Часть 2");
         // Задание 1
         System.out.println("Задание 1");
         total = 15_000;
-        monthlySavings = 15_000;
-        for (i = 1; total <= 12_000_000; i++) {
-            total = total + total/100 * 7;
-            total = total + monthlySavings;
-            System.out.println("Месяц " + i + ", сумма накоплений составляет " + total + " рублей.");
+        m = 0;
+        while (total < 12_000_000) {
+            total = total + total / 100 * 7;
+            m++;
+            System.out.println("Месяц " + m + ", сумма накоплений составляет " + total + " рублей.");
         }
         // Задание 2
         System.out.println("Задание 2");
         total = 15_000;
-        monthlySavings = 15_000;
-        for (i = 1; total <= 12_000_000; i++) {
+        for (m = 1; total < 12_000_000; m++) {
             total = total + total / 100 * 7;
-            total = total + monthlySavings;
-            if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", сумма накоплений составляет " + total + " рублей.");
+            if (m % 6 == 0) {
+                System.out.println("Месяц " + m + ", сумма накоплений составляет " + total + " рублей.");
             }
         }
         // Задание 3
         System.out.println("Задание 3");
         total = 15_000;
-        monthlySavings = 15_000;
-        int monthsIn9Years = 12 * 9;
-        for (i = 1; i <= monthsIn9Years; i++) {
+        int yearsOfSaving = 9;
+        int monthsOfSaving = 12 * yearsOfSaving;
+        for (m = 1; m <= monthsOfSaving; m++) {
             total = total + total / 100 * 7;
-            total = total + monthlySavings;
-            if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", сумма накоплений составляет " + total + " рублей.");
+            if (m % 6 == 0) {
+                System.out.println("Месяц " + m + ", сумма накоплений составляет " + total + " рублей.");
             }
         }
         // Задание 4
@@ -90,8 +87,8 @@ public class Main {
         }
         // Задание 2
         System.out.println("Задание 2");
-        for (int m = 1; m <= 10; m++) {
-            System.out.println("2 * " + m + " = " + m * 2);
+        for (int n = 1; n <= 10; n++) {
+            System.out.println("2 * " + n + " = " + n * 2);
         }
 
     }
