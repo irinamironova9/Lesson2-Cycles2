@@ -6,12 +6,11 @@ public class Main {
         System.out.println("Задание 1");
         int monthlySavings = 15_000;
         int total = 0;
-        int m = 0; // m - month (здесь и далее кол-во месяцев)
+        int month = 0;
         while (total < 2_459_000) {
-            total = total + total / 100;
-            total = total + monthlySavings;
-            m = m + 1;
-            System.out.println("Месяц " + m + ", сумма накоплений равна " + total + " рублей.");
+            total += total / 100 + monthlySavings;
+            month++;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей.");
         }
         // Задание 2
         System.out.println("Задание 2");
@@ -27,31 +26,31 @@ public class Main {
         System.out.println();
         // Задание 3
         System.out.println("Задание 3");
-        int population = 12_000_000;
+        double population = 12_000_000;
         int birthsPer1000 = 17;
         int deathsPer1000 = 8;
         for(int y = 1; y <=10; y++) {
             population = population + (population / 1000 * birthsPer1000) - (population / 1000 * deathsPer1000);
-            System.out.println("Год " + y + ", численность населения составляет " + population + " человек.");
+            System.out.println("Год " + y + ", численность населения составляет " + Math.round(population) + " человек.");
         }
         // ДЗ Часть 2
         System.out.println("ДЗ Часть 2");
         // Задание 1
         System.out.println("Задание 1");
-        total = 15_000;
-        m = 0;
-        while (total < 12_000_000) {
-            total = total + total / 100 * 7;
-            m++;
-            System.out.println("Месяц " + m + ", сумма накоплений составляет " + total + " рублей.");
+        double totalSavings = 15_000;
+        month = 0;
+        while (totalSavings < 12_000_000) {
+            totalSavings = totalSavings + totalSavings / 100 * 7;
+            month++;
+            System.out.println("Месяц " + month + ", сумма накоплений составляет " + Math.round(totalSavings) + " рублей.");
         }
         // Задание 2
         System.out.println("Задание 2");
         total = 15_000;
-        for (m = 1; total < 12_000_000; m++) {
+        for (month = 1; total < 12_000_000; month++) {
             total = total + total / 100 * 7;
-            if (m % 6 == 0) {
-                System.out.println("Месяц " + m + ", сумма накоплений составляет " + total + " рублей.");
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", сумма накоплений составляет " + total + " рублей.");
             }
         }
         // Задание 3
@@ -59,19 +58,17 @@ public class Main {
         total = 15_000;
         int yearsOfSaving = 9;
         int monthsOfSaving = 12 * yearsOfSaving;
-        for (m = 1; m <= monthsOfSaving; m++) {
+        for (month = 1; month <= monthsOfSaving; month++) {
             total = total + total / 100 * 7;
-            if (m % 6 == 0) {
-                System.out.println("Месяц " + m + ", сумма накоплений составляет " + total + " рублей.");
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", сумма накоплений составляет " + total + " рублей.");
             }
         }
         // Задание 4
         System.out.println("Задание 4");
         int firstFriday = 2;
-        for (int date = 1; date <= 31; date++) {
-            if (date == firstFriday || (date - firstFriday) % 7 == 0) {
+        for (int date = firstFriday; date <= 31; date += 7) {
                 System.out.println("Сегодня пятница, " + date + " число. Необходимо подготовить отчёт.");
-            }
         }
         // ДЗ Часть 3
         System.out.println("ДЗ Часть 3");
